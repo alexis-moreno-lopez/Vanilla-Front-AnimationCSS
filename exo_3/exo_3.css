@@ -1,0 +1,142 @@
+/*// BASE STYLES //*/
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+}
+.grass,
+.sky,
+.road {
+  position: relative;
+}
+.sky {
+  height: 40%;
+  background-color: skyblue;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.33)
+  );
+}
+.grass {
+  height: 30%;
+  background-color: seagreen;
+  background-image: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0) 75%,
+    rgba(255, 255, 255, 0.25)
+  );
+}
+.road {
+  height: 30%;
+  background: dimgrey;
+  box-sizing: border-box;
+  border-top: 10px solid grey;
+  border-bottom: 10px solid grey;
+  width: 100%;
+}
+/*// ELEMENTS TO ANIMATE //*/
+.mario {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  animation-name: drive;
+  animation-duration: 4s;
+  animation-direction: normal;
+  animation-fill-mode: ;
+  animation-delay: ;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  z-index: 5;
+}
+.luigi {
+  position: absolute;
+  top: -20px;
+  left: -50px;
+  z-index: 55;
+  animation-name: drive;
+  animation-duration: 4s;
+  animation-direction: ;
+  animation-fill-mode: ;
+  animation-delay: ;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.cloud {
+  position: absolute;
+  top: 120px;
+  left: 0;
+}
+.cloud2 {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  max-width: 200px;
+}
+.cloud,
+.cloud2 {
+  animation-name: cloud-move;
+  animation-duration: 3s;
+  animation-direction: ;
+  animation-fill-mode: ;
+  animation-delay: ;
+  animation-timing-function: ;
+  animation-iteration-count: infinite;
+}
+.lines {
+  box-sizing: border-box;
+  border: 5px dashed #fff;
+  height: 0px;
+  width: 6000px;
+  position: absolute;
+  top: 45%;
+  left: 0;
+  animation-name: lines-move;
+  animation-duration: 3s;
+  animation-direction: ;
+  animation-fill-mode: ;
+  animation-delay: ;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+/*// KEYFRAMES //*/
+@keyframes drive {
+  0% {
+  }
+
+  45% {
+    transform: translate(1000px, -20px);
+  }
+  50% {
+    transform: translate(1100px, -50px);
+  }
+  55% {
+    transform: translate(1200px, 0);
+  }
+
+  100% {
+    transform: translate(2200px, 0px);
+  }
+}
+
+@keyframes mario-jump {
+}
+@keyframes cloud-move {
+  0% {
+    transform: translate(1800px, 0);
+  }
+
+  100% {
+    transform: translate(-2400px, 0px);
+  }
+}
+@keyframes lines-move {
+  0% {
+    transform: translate(-600px, 0px);
+  }
+  100% {
+    transform: translate(-1000px, 0px);
+  }
+}
