@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0;
+  }
+  div {
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    height: 200px;
+    transform: scale(2);
+    transform: rotate(20grad);
+    transition: 200ms linear;
+    animation-name: translation;
+    animation-duration: 10s;
+    animation-iteration-count:infinite;
+   
+  
+  }
+  img:hover{
+    filter: blur(4px)
+  }
+  div img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+@keyframes translation{
+  50% {translate: 1000px}
+  100% {translate: 1000px 1000px}
+}
